@@ -1,0 +1,61 @@
+/* QnaPage.module.css */
+.qnaPage {
+  padding: 80px 40px 40px; /* 상단 패딩을 더 주어 네비게이션바를 피하도록 설정 */
+  background-color: #2a2a2a;
+  color: #2a2a2a;
+  font-family: Arial, sans-serif;
+  margin-top: 60px; /* 네비게이션 바 아래로 위치시키기 위해 추가 */
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #1e90ff;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faqItem {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.faqQuestion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.faqAnswer {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.toggleIcon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.toggleIconOpen {
+  transform: rotate(90deg);
+}
+
+.faqItem:hover {
+  background-color: #f1f1f1;
+}
+
+.faqItem:active {
+  background-color: #e0e0e0;
+}

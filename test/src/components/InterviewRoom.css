@@ -1,0 +1,315 @@
+/* interview-room의 스타일 수정 */
+.interview-room {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  background-color: #e9ebf1;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 150px;
+  position: relative;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  gap: 20px;
+}
+
+.ai-section,
+.user-section {
+  flex: 1 1 320px;
+  min-width: 280px;
+  max-width: 600px;
+  padding: 25px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.ai-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-wrapper {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 20px auto;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-gif {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.user-video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+h3 {
+  text-align: center;
+  color: #333;
+}
+
+.question {
+  font-size: 18px;
+  margin: 20px 0;
+  text-align: center;
+  color: #333;
+}
+
+/* 타이머 위치 */
+.timer-circle {
+  position: absolute;
+  top: 80px;
+  right: 220px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #3498db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.progress-ring {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+}
+
+.progress-ring__circle {
+  stroke: #fff;
+}
+
+.timer-text {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.timer-box {
+  display: none;
+}
+
+.timer-text1{
+  display: none;
+}
+
+/* 버튼들 */
+.stt-button-row {
+  display: flex;
+  justify-content: center;
+  gap: 0px;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 400px;
+  
+  
+}
+
+.voice-button {
+  width: 200px;
+  height: 48px;
+  font-size: 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.voice-button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.voice-button:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+/* 고개 끄덕임 경고 */
+.nod-warning {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fffbe6;
+  color: #664d03;
+  border: 1px solid #ffe58f;
+  border-radius: 6px;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  animation: fadeout 1s ease-in-out 2s forwards;
+}
+
+@keyframes fadeout {
+  0% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* 반응형 */
+/* 기존 스타일 유지하고 모바일에서만 아래 스타일 적용 */
+@media (max-width: 768px) {
+  .interview-room {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 10px;
+    margin-top: 80px;
+    max-width: 480px;
+    gap : 0px;
+
+   
+  }
+
+  .ai-section,
+  .user-section {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 25px;
+    padding: 15px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    background-color: white; /* 넷플릭스 느낌 어두운 배경 */
+    color: #eee;
+    text-align: center;
+  }
+
+  .ai-section h3,
+  .user-section h3 {
+    color: black; /* 넷플릭스 레드 */
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .avatar-wrapper {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px auto;
+    box-shadow: 0 0 15px;
+  }
+
+  .avatar-gif {
+    border-radius: 50%;
+    
+  }
+
+  .question {
+    font-size: 18px;
+    padding: 0 15px;
+    line-height: 1.4;
+    color: black;
+  }
+
+  .user-video {
+    border-radius: 15px;
+    
+  }
+
+  .timer-circle {
+    display: none;
+  }
+
+  .timer-box {
+  position: relative;
+  width: 100%;
+  max-width: 390px;
+  
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 10px;
+  margin: -10px 0 10px 0;  /* 위로 10px 올림 */
+  display: block;
+  }
+
+.timer-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color: #2980b9;
+  border-radius: 10px;
+  width: var(--timer-progress);
+  transition: width 1s linear;
+  transform-origin: left; /* 왼쪽 기준으로 변형 */
+  display: block;
+}
+
+.timer-text1 {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;  
+  display: block;
+}
+
+
+  .stt-button-row {
+    margin-top: -15px;
+    flex-direction: row; /* 세로 → 가로 변경 */
+    justify-content: space-between; /* 버튼을 좌우로 나누기 */
+    gap: -60px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .voice-button {
+    width: 60%;
+    height: 52px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 30px;
+    background-color: #2980b9;
+    color: #fff;
+    
+    transition: background-color 0.3s ease;
+  }
+
+  .voice-button:hover:not(:disabled) {
+    background-color: #555;
+  }
+
+  .voice-button:disabled {
+    background-color: #555;
+    color: #ccc;
+    cursor: not-allowed;
+  }
+
+  /* 고개 끄덕임 경고 */
+  .nod-warning {
+    top: 10px;
+    font-size: 14px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background-color: #ff4c4c;
+    color: white;
+    box-shadow: 0 2px 8px rgba(255, 0, 0, 0.6);
+    animation: fadeout 1s ease-in-out 2s forwards;
+  }
+}

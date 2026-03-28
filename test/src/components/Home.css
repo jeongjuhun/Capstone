@@ -1,0 +1,144 @@
+/* 기존 스타일 유지 */
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.home-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 20px;
+  padding-top: 120px;
+}
+
+.home-h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.start-button {
+  background-color: #1e90ff;
+  color: white;
+  padding: 14px 28px;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  top: 50px;
+  animation: popIn 0.8s ease-out forwards;
+  box-shadow: 0 0 0 rgba(30, 144, 255, 0.7);
+}
+
+.start-button:hover {
+  background-color: #0066cc;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(30, 144, 255, 0.8);
+  transform: scale(1.05);
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.start-button:active {
+  transform: scale(0.96);
+  box-shadow: 0 0 12px rgba(30, 144, 255, 1);
+}
+
+.features-section {
+  background-color: black;
+  color: white;
+  padding: 80px 40px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  text-align: center;
+}
+
+.feature {
+  flex: 1 1 300px;
+  max-width: 350px;
+}
+
+.feature h2 {
+  color: #1e90ff;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.feature p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.footer {
+  background-color: #111;
+  color: #999;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 14px;
+}
+
+.footer-content p {
+  margin: 8px 0;
+}
+
+
+/* -------------------- 📱 반응형 추가 -------------------- */
+@media (max-width: 768px) {
+  .home-content {
+    padding-top: 80px;
+    padding: 20px;
+  }
+
+  .home-content h1 {
+    font-size: 2rem;
+  }
+
+  .home-content p {
+    font-size: 1rem;
+  }
+
+  .start-button {
+    font-size: 16px;
+    padding: 12px 20px;
+    top: 30px;
+  }
+
+  .features-section {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 20px;
+  }
+
+  .feature {
+    max-width: 100%;
+  }
+
+  .feature h2 {
+    font-size: 20px;
+  }
+
+  .feature p {
+    font-size: 14px;
+  }
+}

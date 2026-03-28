@@ -1,0 +1,82 @@
+/* 전체 컨테이너 중앙 정렬 */
+.start-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #333, #333);
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  
+  
+  .test-box {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* 제목 스타일 */
+  .test-box h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #1e3c72;
+  }
+  
+  /* 버튼 공통 스타일 */
+  .test-box button {
+    padding: 12px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .test-box button:hover {
+    background-color: #0f6cbf;
+  }
+  
+  /* 마이크 시각화 바 */
+  .test-box .mic-level-bar {
+    height: 10px;
+    width: 100%;
+    background: #333;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+  
+  .test-box .mic-level-fill {
+    height: 100%;
+    background-color: #2ecc71;
+    transition: width 0.1s ease;
+  }
+  
+  /* 비디오 */
+  .test-box video {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* 면접 시작 메시지 */
+  .test-box .start-message {
+    margin-top: 30px;
+    font-size: 20px;
+    color: #1e90ff;
+    font-weight: bold;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* 메시지 애니메이션 */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
